@@ -1,0 +1,47 @@
+{
+    "name": "ManagerBto",
+    "description": "Bota atilan mesajlari admine gonderir admin tesdiqlese kanalda paylasilir.",
+    "logo": "",
+    "keywords": [
+        "telegram",
+        "telethon",
+        "telegram-bot"
+    ],
+    "repository": "https://github.com/Mensimov/ManagerBto",
+    "success_url": "https://t.me/rihads",
+    "env": {
+        "API_HASH": {
+            "description": "my.telegram.org -dan alınan API_HASH",
+            "value": ""
+        },
+        "APP_ID": {
+            "description": "my.telegram.org -dan alınan APP_ID",
+            "value": ""
+        },
+        "BOT_TOKEN": {
+            "description": "Botunuzun Tokeni",
+            "value": ""
+        },
+        "ADMIN": {
+            "description": "Sahibin ID",
+            "value": ""
+        },
+        "KANAL": {
+            "description": "Kanalın ID",
+            "value": ""
+        },
+        "ADMIN_USERNAME": {
+            "description": "Sahinin username @ işarəsi olmadan",
+            "value": "rihad"
+        },
+        "KANAL_USERNAME": {
+            "description": "Kanalın username @ işarəsi olmadan",
+            "value": "rihads"
+        }
+    },
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        }
+    ]
+}
