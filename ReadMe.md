@@ -1,5 +1,5 @@
 # Manager Bto
-[Telethon](https://github.com/LonamiWebs/Telethon) ilə yazılmışdır. Bota atılan mesajları adminə yönləndirir (feedback). Adminin təsdiqləməsi ilə botun postu kanala göndərmə xüsusiyyəti iləş
+[Telethon](https://github.com/LonamiWebs/Telethon) ilə yazılmışdır. Bota atılan mesajları adminə yönləndirir (feedback). Adminin təsdiqləməsi ilə botun postu kanala göndərmə xüsusiyyəti ilə
 
 Mən: [@Rihad](https://t.me/Rihad)
 Kanal: [@Rihads](https://t.me/Rihads)
