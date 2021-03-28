@@ -1,7 +1,7 @@
 from telethon.tl.custom import Button
 from telethon import events
 from .. import klent, ADMIN_USERNAME, KANAL_USERNAME
-@klent.on(events.NewMessage(pattern="/start"))
+@klent.on(events.NewMessage(pattern=".start"))
 async def alive(event):
     mention = f"[{event.sender.first_name}](tg://user?id={event.sender_id})"
     start_msg = f"""
