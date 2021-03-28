@@ -33,8 +33,6 @@ async def _(event):
             aydii = event.sender_id
             if aydii == int(ADMIN):
                 return
-            if y == "/start":
-                return
             msgtoadmin = await event.client.send_message(ADMIN,y)
             await event.client.send_message(ADMIN,f'Yazan: [{ad}](tg://user?id=' + str(aydii) + ')' + '\nID: ' + '`' + str(aydii) + '`',reply_to=msgtoadmin)
     else:
