@@ -35,9 +35,7 @@ async def _(event):
                 return
             if y == "/start":
                 return
-            msgtoadmin = await event.client.send_message(ADMIN,y,buttons=[
-                        Button.inline('Kanala göndər',b'post')
-                        ])
+            msgtoadmin = await event.client.send_message(ADMIN,y)
             await event.client.send_message(ADMIN,f'Yazan: [{ad}](tg://user?id=' + str(aydii) + ')' + '\nID: ' + '`' + str(aydii) + '`',reply_to=msgtoadmin)
     else:
         pass
