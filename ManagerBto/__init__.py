@@ -2,10 +2,17 @@ from telethon import TelegramClient
 from decouple import config
 import logging
 import time
+import sqlite3
 
 logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s',
                     level=logging.WARNING)
 
+con = sqlite3.connect('user.db')
+cursor = con.cursor()
+cursor.execute("CREATE TABLE IF NOT EXISTS users (msgid INT, userid INT, ad TEXT)")
+def add_to_db(msgid,userid,ad):
+	cursor.execute(f"INSERT INTO users VALUES ({msgid},{userid},'{ad}')")
+	con.commit()
 
 APP_ID = config('APP_ID',default=None,cast=int)
 API_HASH = config('API_HASH',default=None)
