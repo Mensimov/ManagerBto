@@ -10,4 +10,7 @@ Kanal: [@Rihads](https://t.me/Rihads)
 
 # Əmrlər
 `/post <mesaja reply olaraq> <caption>` Bot mesajı verilən caption ilə(varsa) kanala göndərir
+
+`/link <mesaja yanıt>` yanıt verilən mesajı göndərən istifadəçiyə bağlı olan linki verir
+
 İstifadəçiyə mesaj göndərmək üçün həmin istifadəçinin mesajına reply vermək kifayətdir
