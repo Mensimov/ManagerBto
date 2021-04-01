@@ -1,7 +1,7 @@
 from .. import klent, ADMIN, KANAL
 from telethon import events
 
-@klent.on(events.NewMessage(pattern=".post"))
+@klent.on(events.NewMessage(pattern="/post"))
 async def post(event):
     try:
         if event.sender_id == ADMIN:
