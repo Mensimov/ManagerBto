@@ -1,5 +1,5 @@
 # Manager Bto
-[Telethon](https://github.com/LonamiWebs/Telethon) ilə yazılmışdır. Bota atılan mesajları adminə yönləndirir (feedback). Adminin təsdiqləməsi ilə botun postu kanala göndərmə xüsusiyyəti ilə
+[Telethon](https://github.com/LonamiWebs/Telethon) ilə yazılmışdır. Bota atılan mesajları adminə yönləndirir (feedback). Adminin təsdiqləməsi ilə botun postu kanala göndərmə xüsusiyyəti ilə. (sqlite3 ist edilib)
 
 Mən: [@Rihad](https://t.me/Rihad)
 Kanal: [@Rihads](https://t.me/Rihads)
@@ -10,4 +10,4 @@ Kanal: [@Rihads](https://t.me/Rihads)
 
 # Əmrlər
 `/post <mesaja reply olaraq> <caption>` Bot mesajı verilən caption ilə(varsa) kanala göndərir
-`/send <user_id/username/mesaj(və ya mediyaya reply)>` Verilən istifadəçiyə mesaj göndərir
+İstifadəçiyə mesaj göndərmək üçün həmin istifadəçinin mesajına reply vermək kifayətdir
