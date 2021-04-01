@@ -1,41 +1,27 @@
-from .. import klent
+from .. import klent, ADMIN, con, cursor
 from telethon import events
-from .. import ADMIN
-@klent.on(events.NewMessage(pattern=".send"))
-async def send(event):
+import asyncio
+
+@klent.on(events.NewMessage)
+async def main(event):
     if event.sender_id == ADMIN:
-        try:
-            rep = await event.get_reply_message()
-            if rep:
-                if rep.media:
-                    message = event.text
-                    split = message.split(" ", 2)
-                    try:
-                        user = int(split[1])
-                        try:
-                            if str(split[2]):
-                                cap = str(split[2])
-                        except:
-                            cap = ''
-                    except:
-                        user = str(split[1])
-                        try:
-                            if str(split[2]):
-                                cap = str(split[2])
-                        except:
-                            cap = ''
-                    await event.client.send_file(user,rep.file.id,caption=cap)
-                    await event.reply('Mesaj göndərildi')
-            else:
-                message = event.text
-                split = message.split(" ", 2)
+        if event.is_private:
+            if event.text == '/link' or event.text == '/post':
+                return
+            if event.is_reply:
+                rep = await event.get_reply_message()
                 try:
-                    user = int(split[1])
-                    text = str(split[2])
+                    a = cursor.execute(f"SELECT userid FROM users WHERE msgid = {rep.id}")
+                    mesaj = a.fetchall()
+                    aydi = mesaj[0][0]
                 except:
-                    user = str(split[1])
-                    text = str(split[2])
-                await event.client.send_message(user,text)
-                await event.reply('Mesaj göndərildi')
-        except Exception as e:
-            await event.reply(f'Bir xəta yarandı:\n`{e}`')
+                    await event.reply('Mesaj DataBase- də tapılmadı')
+                try:
+                    if event.media:
+                        await event.client.send_file(aydi,event.media,caption=event.text)
+                    else:
+                        await event.client.send_message(aydi,event.text)
+                except:
+                    x = await event.reply('Mesaj göndərilə bilmədi')
+                    await asyncio.sleep(5)
+                    await x.delete() #mirta
