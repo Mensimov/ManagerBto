@@ -7,6 +7,7 @@ async def link(event):
 		rep = await event.get_reply_message()
 		if not rep:
 			await event.reply('Bir mesaja yanıt ver')
+                        return
 		try:
 			a = cursor.execute(f"SELECT ad, userid FROM users WHERE msgid = {rep.id}")
 			mesaj = a.fetchall()
