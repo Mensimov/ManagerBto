@@ -8,6 +8,8 @@ async def main(event):
         if event.is_private:
             if event.text == '/link' or event.text == '/post':
                 return
+            if event.text.startswith('/post'):
+                return
             if event.is_reply:
                 rep = await event.get_reply_message()
                 try:
