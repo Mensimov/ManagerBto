@@ -6,7 +6,7 @@ import asyncio
 async def main(event):
     if event.sender_id == ADMIN:
         if event.is_private:
-            if event.text == '/link' or event.text == '/post':
+            if event.text == '/link':
                 return
             if event.text.startswith('/post'):
                 return
