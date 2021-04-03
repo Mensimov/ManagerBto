@@ -9,8 +9,8 @@ async def link(event):
                     await event.reply('Bir mesaja yanıt ver')
                     return
 		try:
-	            a = cursor.execute(f"SELECT ad, userid FROM users WHERE msgid = {rep.id}")
-		    mesaj = a.fetchall()
-		    await event.reply(f'İStifadəçi: [{mesaj[0][0]}](tg://user?id={mesaj[0][1]})\nID: `{mesaj[0][1]}`')
-		except:
-		    await event.reply('Mesaj DataBase- də tapılmnadı')
+                    a = cursor.execute(f"SELECT ad, userid FROM users WHERE msgid = {rep.id}")
+                    mesaj = a.fetchall()
+                    await event.reply(f'İStifadəçi: [{mesaj[0][0]}](tg://user?id={mesaj[0][1]})\
+                except:
+                    await event.reply('Mesaj DataBase- də tapılmnadı')
