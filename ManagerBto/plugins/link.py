@@ -11,6 +11,6 @@ async def link(event):
 		try:
                     a = cursor.execute(f"SELECT ad, userid FROM users WHERE msgid = {rep.id}")
                     mesaj = a.fetchall()
-                    await event.reply(f'İStifadəçi: [{mesaj[0][0]}](tg://user?id={mesaj[0][1]})\
+                    await event.reply(f'İStifadəçi: [{mesaj[0][0]}](tg://user?id={mesaj[0][1]})
                 except:
-                    await event.reply('Mesaj DataBase- də tapılmnadı')
+                    await event.reply('Mesaj DataBase də tapılmadı')
