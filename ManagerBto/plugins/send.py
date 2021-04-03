@@ -12,6 +12,8 @@ async def main(event):
                 return
             if event.is_reply:
                 rep = await event.get_reply_message()
+                if rep.sender_id == ADMIN:
+                    return
                 try:
                     a = cursor.execute(f"SELECT userid FROM users WHERE msgid = {rep.id}")
                     mesaj = a.fetchall()
